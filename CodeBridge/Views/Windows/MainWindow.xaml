@@ -1,0 +1,146 @@
+<Window x:Class="SideNav.Views.Windows.MainWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:SideNav.Views.Windows"
+      mc:Ignorable="d"
+      Title="Code Bridge"
+      Height="720"
+      Width="1280"
+      Icon="../../img/MainIcon.ico">
+    <Grid>
+        
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="../../img/SplashGB 1.png"/>
+        </Grid.Background>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid Column="1">
+                <Rectangle
+                    Width="440"
+                    Height="570"
+                    Fill="#D9D9D9"
+                    RadiusX="45" RadiusY="45"
+                    Margin="70"
+                    />
+                
+                <Label
+                    Margin="0 100 0 0"
+                    HorizontalAlignment="Center"
+                    FontSize="38"
+                    FontWeight="Medium"
+                >
+                    Welcome Back!
+                    <Label.BitmapEffect>
+                        <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.7" />
+                    </Label.BitmapEffect>
+                </Label>
+                
+                <Grid>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="250"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Grid Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Label Grid.Column="1" FontWeight="Medium" FontSize="20">
+                            Username:
+                        </Label>
+
+                    </Grid>
+                    
+                    <Grid Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Label Grid.Column="1" FontWeight="Medium" FontSize="20" Margin="0 30 0 0">
+                            password:
+                        </Label>
+                    </Grid>
+                    
+                    <RichTextBox 
+                        Grid.Row="1" 
+                        Height="35" 
+                        Width="384" 
+                        FontSize="20" 
+                        Margin="0 30 0 0"
+                        BorderThickness="2"
+                        BorderBrush="#766B97"
+                        Name="Username">
+                        
+                        <RichTextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="15"/>
+                            </Style>
+                        </RichTextBox.Resources>
+                    </RichTextBox>
+                    
+                    <PasswordBox 
+                        Grid.Row="2" 
+                        Height="35" 
+                        Width="384" 
+                        FontSize="20" 
+                        BorderThickness="2"
+                        BorderBrush="#766B97"
+                        Name="Password"
+                    >
+                        <PasswordBox.Template>
+                            <ControlTemplate TargetType="PasswordBox">
+                                <Border 
+                                    CornerRadius="15"
+                                    Background="{TemplateBinding Background}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                >
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </PasswordBox.Template>
+                    </PasswordBox>
+                </Grid>
+                
+                
+            </Grid>
+            
+            <Button 
+                Grid.Column="1" 
+                Width="200" 
+                Height="30" 
+                Margin="20 400 0 0" 
+                BorderThickness="0" 
+                Background="#8F72A1"
+                FontSize="20"
+                FontWeight="SemiBold"
+                Click="SignIn"
+                Name="Button">
+                 Sign In
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                <Button.BitmapEffect>
+                    <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5" />
+                </Button.BitmapEffect>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
