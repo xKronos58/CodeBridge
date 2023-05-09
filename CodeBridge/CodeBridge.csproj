@@ -14,9 +14,7 @@
       <None Remove="img\defaultPfp 1.png" />
       <Resource Include="img\defaultPfp 1.png" />
       <None Remove="img\defaultPfp 16.png" />
-      <Resource Include="img\defaultPfp 16.png" />
       <None Remove="img\defaultPfp 16 (1).png" />
-      <Resource Include="img\defaultPfp 16 (1).png" />
       <None Remove="img\MainIcon.ico" />
       <Resource Include="img\MainIcon.ico" />
     </ItemGroup>

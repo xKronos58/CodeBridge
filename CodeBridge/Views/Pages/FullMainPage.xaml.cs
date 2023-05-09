@@ -1,9 +1,13 @@
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
+using System.Windows.Media.Imaging;
 
 namespace SideNav.Views.Pages;
 
@@ -21,8 +25,9 @@ public partial class FullMainPage : Page
     {
         if (Members.Count == 0)
             DefaultMembers();
-
+        
         List<Label> memberNames = new List<Label>();
+        List<Image> pfps = new List<Image>();
 
         foreach (var member in Members.Values)
         {
@@ -65,6 +70,20 @@ public partial class FullMainPage : Page
             label.Style = labelStyle;
 
             memberNames.Add(label);
+
+            var rand = new Random();
+
+            Image pfp = new Image();
+            pfp.Width = 24;
+            pfp.Height = 24;
+            pfp.Margin = new Thickness(52, 30, 0, 0);
+            pfp.Source = new BitmapImage(new Uri(rand.Next(2) switch
+            {
+                1 => @"file:///W:/SideNav/CodeBridge/img/bluePfp.png",
+                2 => @"file:///W:/SideNav/CodeBridge/img/yellowPfp.png",
+                _ => @""
+            }));
+            MemberGrid.Children.Add(pfp);
         }
 
         // Add all labels to the MemberGrid.Children collection at once
