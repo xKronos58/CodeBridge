@@ -21,3 +21,5 @@ W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\refint\CodeBridge.dll
 W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\CodeBridge.pdb
 W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\CodeBridge.genruntimeconfig.cache
 W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\ref\CodeBridge.dll
+W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\RepoPage.g.cs
+W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\RepoPage.baml
