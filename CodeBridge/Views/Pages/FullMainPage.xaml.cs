@@ -247,51 +247,51 @@ public partial class FullMainPage : Page
             {
                 case "Code_Bridge":
                     repoFileLoad.Add("Code_Bridge", new string[] {""});
-                    repoFileLoad.Add(".idea/.idea.codeBridge/.Idea", new string[] {$"Z:/CodeBridge/{_user}/{repo}/.idea/.idea.codeBridge/.Idea", "id:[0a000001aa1a]", "folder"});
-                    repoFileLoad.Add("CodeBridge", new string[] {$"Z:/CodeBridge/{_user}/{repo}/CodeBridge", "id:[0a000001aa1b]", "folder"});
-                    repoFileLoad.Add("README.md", new string[] {$"Z:/CodeBridge/{_user}/{repo}/README.md", "id:[0a000001aa1c]", "file"});
-                    repoFileLoad.Add("CodeBridge.sln", new string[] {$"Z:/CodeBridge/{_user}/{repo}/CodeBridge.sln", "id:[0000001aa1d]", "file"});
-                    repoFileLoad.Add("CodeBridge.sln.DotSettings.user", new string[] {$"Z:/CodeBridge/{_user}/{repo}/CodeBridge.sln.DotSettings.user", "id:[0000001aa1e]", "file"});
+                    repoFileLoad.Add(".idea/.idea.codeBridge/.Idea", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/.idea/.idea.codeBridge/.Idea", "id:[0a000001aa1a]", "folder"});
+                    repoFileLoad.Add("CodeBridge", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/CodeBridge", "id:[0a000001aa1b]", "folder"});
+                    repoFileLoad.Add("README.md", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/README.md", "id:[0a000001aa1c]", "file"});
+                    repoFileLoad.Add("CodeBridge.sln", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/CodeBridge.sln", "id:[0000001aa1d]", "file"});
+                    repoFileLoad.Add("CodeBridge.sln.DotSettings.user", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/CodeBridge.sln.DotSettings.user", "id:[0000001aa1e]", "file"});
                     break;
                 case "Ms_Office":
                     repoFileLoad.Add("Ms_Office", new string[] {""});
-                    repoFileLoad.Add(".idea/.idea.msOffice/.Idea", new string[] {$"Z:/CodeBridge/{_user}/{repo}/.idea/.idea.msOffice/.Idea", "id:[0a000001aa1a]", "folder"});
-                    repoFileLoad.Add("_Ms_Office", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Ms_Office", "id:[0a000001aa1b]", "folder"});
-                    repoFileLoad.Add("README.md", new string[] {$"Z:/CodeBridge/{_user}/{repo}/README.md", "id:[0a000001aa1f]", "file"});
-                    repoFileLoad.Add("Ms_Office.sln", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Ms_Office.sln", "id:[0a000001aa1g]", "file"});
-                    repoFileLoad.Add("Ms_Office.sln.DotSettings.user", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Ms_Office.sln.DotSettings.user", "id:[0a000001aa1h]", "file"});
+                    repoFileLoad.Add(".idea/.idea.msOffice/.Idea", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/.idea/.idea.msOffice/.Idea", "id:[0a000001aa1a]", "folder"});
+                    repoFileLoad.Add("_Ms_Office", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/Ms_Office", "id:[0a000001aa1b]", "folder"});
+                    repoFileLoad.Add("README.md", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/README.md", "id:[0a000001aa1f]", "file"});
+                    repoFileLoad.Add("Ms_Office.sln", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/Ms_Office.sln", "id:[0a000001aa1g]", "file"});
+                    repoFileLoad.Add("Ms_Office.sln.DotSettings.user", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/Ms_Office.sln.DotSettings.user", "id:[0a000001aa1h]", "file"});
                     break;
                 case "IOS_source":
                     repoFileLoad.Add("IOS_source", new string[] {""});
-                    repoFileLoad.Add(".idea/.idea.iosSource/.Idea", new string[] {$"Z:/CodeBridge/{_user}/{repo}/.idea/.idea.iosSource/.Idea", "id:[0a000001aa1a]", "folder"});
-                    repoFileLoad.Add("_IOS_source", new string[] {$"Z:/CodeBridge/{_user}/{repo}/IOS_source", "id:[0a000001aa1b]", "folder"});
-                    repoFileLoad.Add("README.md", new string[] {$"Z:/CodeBridge/{_user}/{repo}/README.md", "id:[0a000001aa1i]", "file"});
-                    repoFileLoad.Add("IOS_source.sln", new string[] {$"Z:/CodeBridge/{_user}/{repo}/IOS_source.sln", "id:[0a000001aa1j]", "file"});
-                    repoFileLoad.Add("IOS_source.sln.DotSettings.user", new string[] {$"Z:/CodeBridge/{_user}/{repo}/IOS_source.sln.DotSettings.user", "id:[0a000001aa1k]", "file"});
+                    repoFileLoad.Add(".idea/.idea.iosSource/.Idea", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/.idea/.idea.iosSource/.Idea", "id:[0a000001aa1a]", "folder"});
+                    repoFileLoad.Add("_IOS_source", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/IOS_source", "id:[0a000001aa1b]", "folder"});
+                    repoFileLoad.Add("README.md", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/README.md", "id:[0a000001aa1i]", "file"});
+                    repoFileLoad.Add("IOS_source.sln", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/IOS_source.sln", "id:[0a000001aa1j]", "file"});
+                    repoFileLoad.Add("IOS_source.sln.DotSettings.user", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/IOS_source.sln.DotSettings.user", "id:[0a000001aa1k]", "file"});
                     break;
                 case "Android_source":
                     repoFileLoad.Add("Android_source", new string[] {""});
-                    repoFileLoad.Add(".idea/.idea.androidSource/.Idea", new string[] {$"Z:/CodeBridge/{_user}/{repo}/.idea/.idea.androidSource/.Idea", "id:[0a000001aa1a]", "folder"});
-                    repoFileLoad.Add("_Android_source", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Android_source", "id:[0a000001aa1b]", "folder"});
-                    repoFileLoad.Add("README.md", new string[] {$"Z:/CodeBridge/{_user}/{repo}/README.md", "id:[0a000001aa1l]", "file"});
-                    repoFileLoad.Add("Android_source.sln", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Android_source.sln", "id:[0a000001aa1m]", "file"});
-                    repoFileLoad.Add("Android_source.sln.DotSettings.user", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Android_source.sln.DotSettings.user", "id:[0a000001aa1n]", "file"});
+                    repoFileLoad.Add(".idea/.idea.androidSource/.Idea", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/.idea/.idea.androidSource/.Idea", "id:[0a000001aa1a]", "folder"});
+                    repoFileLoad.Add("_Android_source", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/Android_source", "id:[0a000001aa1b]", "folder"});
+                    repoFileLoad.Add("README.md", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/README.md", "id:[0a000001aa1l]", "file"});
+                    repoFileLoad.Add("Android_source.sln", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/Android_source.sln", "id:[0a000001aa1m]", "file"});
+                    repoFileLoad.Add("Android_source.sln.DotSettings.user", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/Android_source.sln.DotSettings.user", "id:[0a000001aa1n]", "file"});
                     break;
                 case "Windows_source":
                     repoFileLoad.Add("Windows_source", new string[] {""});
-                    repoFileLoad.Add(".idea/.idea.windowsSource/.Idea", new string[] {$"Z:/CodeBridge/{_user}/{repo}/.idea/.idea.windowsSource/.Idea", "id:[0a000001aa1a]", "folder"});
-                    repoFileLoad.Add("_Windows_source", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Windows_source", "id:[0a000001aa1b]", "folder"});
-                    repoFileLoad.Add("README.md", new string[] {$"Z:/CodeBridge/{_user}/{repo}/README.md", "id:[0a000001aa1o]", "file"});
-                    repoFileLoad.Add("Windows_source.sln", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Windows_source.sln", "id:[0a000001aa1p]", "file"});
-                    repoFileLoad.Add("Windows_source.sln.DotSettings.user", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Windows_source.sln.DotSettings.user", "id:[0a000001aa1q]", "file"});
+                    repoFileLoad.Add(".idea/.idea.windowsSource/.Idea", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/.idea/.idea.windowsSource/.Idea", "id:[0a000001aa1a]", "folder"});
+                    repoFileLoad.Add("_Windows_source", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/Windows_source", "id:[0a000001aa1b]", "folder"});
+                    repoFileLoad.Add("README.md", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/README.md", "id:[0a000001aa1o]", "file"});
+                    repoFileLoad.Add("Windows_source.sln", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/Windows_source.sln", "id:[0a000001aa1p]", "file"});
+                    repoFileLoad.Add("Windows_source.sln.DotSettings.user", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/Windows_source.sln.DotSettings.user", "id:[0a000001aa1q]", "file"});
                     break;
                 case "Linux_source":
                     repoFileLoad.Add("Linux_source", new string[] {""});
-                    repoFileLoad.Add(".idea/.idea.linuxSource/.Idea", new string[] {$"Z:/CodeBridge/{_user}/{repo}/.idea/.idea.linuxSource/.Idea", "id:[0a000001aa1a]", "folder"});
-                    repoFileLoad.Add("_Linux_source", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Linux_source", "id:[0a000001aa1b]", "folder"});
-                    repoFileLoad.Add("README.md", new string[] {$"Z:/CodeBridge/{_user}/{repo}/README.md", "id:[0a000001aa1r]", "file"});
-                    repoFileLoad.Add("Linux_source.sln", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Linux_source.sln", "id:[0a000001aa1s]", "file"});
-                    repoFileLoad.Add("Linux_source.sln.DotSettings.user", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Linux_source.sln.DotSettings.user", "id:[0a000001aa1t]", "file"});
+                    repoFileLoad.Add(".idea/.idea.linuxSource/.Idea", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/.idea/.idea.linuxSource/.Idea", "id:[0a000001aa1a]", "folder"});
+                    repoFileLoad.Add("_Linux_source", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/Linux_source", "id:[0a000001aa1b]", "folder"});
+                    repoFileLoad.Add("README.md", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/README.md", "id:[0a000001aa1r]", "file"});
+                    repoFileLoad.Add("Linux_source.sln", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/Linux_source.sln", "id:[0a000001aa1s]", "file"});
+                    repoFileLoad.Add("Linux_source.sln.DotSettings.user", new string[] {$"W:/_CodeBridgeRepo/{_user}/{repo}/Linux_source.sln.DotSettings.user", "id:[0a000001aa1t]", "file"});
                     break;
                 default:
                     repoFileLoad.Add("NAME:", new string[] {"ERROR"});

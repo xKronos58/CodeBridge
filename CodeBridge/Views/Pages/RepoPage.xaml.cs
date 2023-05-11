@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
@@ -83,7 +84,7 @@ public partial class RepoPage : Page
             };
 
             fileName.MouseLeftButtonDown += LoadFile;
-            backGround.MouseLeftButtonDown += LoadFile;
+            // backGround.MouseLeftButtonDown += LoadFile;
 
             Grid.SetColumn(backGround, 0);
             grid.Children.Add(backGround);
@@ -100,8 +101,9 @@ public partial class RepoPage : Page
 
     private void LoadFile(Object sender, EventArgs e)
     {
-        TextFrame.Content = new TextEditor();
-
-        
+        TextEditor te = new TextEditor();
+        TextFrame.Content = te;
+        Label? _sender = sender as Label;
+        te.LoadText(_repoFiles, _currentRepo, _sender.Content.ToString());
     }
 }

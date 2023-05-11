@@ -23,6 +23,6 @@
         <StackPanel Grid.Column="0" Name="FileStruct" Margin="40"/>
         
         <Rectangle Grid.Column="1" Margin="0, 25, 25, 25" RadiusX="30" RadiusY="30" Fill="#1F1F1F"/>
-        <RichTextBox Grid.Column="1" Margin="15, 40, 40, 40" Background="Transparent" BorderThickness="0" Foreground="White"/>
+        <RichTextBox Grid.Column="1" Margin="15, 40, 40, 40" Background="Transparent" BorderThickness="0" Foreground="White" Name="TextField"/>
     </Grid>
 </Page>
