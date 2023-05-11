@@ -17,6 +17,10 @@
       <None Remove="img\defaultPfp 16 (1).png" />
       <None Remove="img\MainIcon.ico" />
       <Resource Include="img\MainIcon.ico" />
+      <None Remove="img\FileIcon.png" />
+      <Resource Include="img\FileIcon.png" />
+      <None Remove="img\FolderIcon.png" />
+      <Resource Include="img\FolderIcon.png" />
     </ItemGroup>
 
 </Project>

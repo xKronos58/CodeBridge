@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
+using SideNav.Views.Windows;
 using static System.Windows.Media.Colors;
 using Color = System.Windows.Media.Color;
 using Point = System.Windows.Point;
@@ -21,12 +22,15 @@ public partial class FullMainPage : Page
 {
     public Dictionary<string, string> Members = new Dictionary<string, string>();
     public Dictionary<string, string> Repos = new Dictionary<string, string>();
+    public List<Dictionary<string, string[]>> RepoFiles = new List<Dictionary<string, string[]>>();
+    private string _user = MainWindow.user;
 
     public FullMainPage()
     {
         InitializeComponent();
         LoadMembers();
         LoadRepos();
+        UserName_d.Content = _user;
     }
 
     #region MainPageElementLoading
@@ -58,6 +62,7 @@ public partial class FullMainPage : Page
             // Create the rectangles
             Rectangle leftRect = new Rectangle
             {
+                Name = repo,
                 Width = 295,
                 Height = 154, 
                 Fill = gradient,
@@ -80,6 +85,7 @@ public partial class FullMainPage : Page
                 Fill = new SolidColorBrush(Color.FromRgb(20, 18, 39)),
                 RadiusX = 30,
                 RadiusY = 30,
+                Name = repo,
                 Effect = new DropShadowEffect
                 {
                     Color = Black,
@@ -188,7 +194,7 @@ public partial class FullMainPage : Page
             pfp.Margin = new Thickness(10, 33, 0, 0);
             pfp.Source = new BitmapImage(new Uri(rand.Next(2) switch
             {
-                2 => @"file:///W:/SideNav/CodeBridge/img/defaultPfp.png",
+                2 => @"file:///W:/SideNav/CodeBridge/img/defaultPfp.png",   //Note this is the file struct for my pc, change to your own.
                 1 => @"file:///W:/SideNav/CodeBridge/img/bluePfp.png",
                 0 => @"file:///W:/SideNav/CodeBridge/img/yellowPfp.png",
                 _ => @""
@@ -208,8 +214,18 @@ public partial class FullMainPage : Page
     
     private void LoadRepo(object sender, MouseButtonEventArgs e)
     {
-        load_frame.Content = new RepoPage();
+        RepoPage rpage = new RepoPage();
+        load_frame.Content = rpage;
         load_frame.BringIntoView();
+        Rectangle rect = (Rectangle) sender;
+        // MessageBox.Show(rect.Name);
+        
+        if(RepoFiles.Count <= 0)
+            RepoList();
+        
+        //Load the repo from the server
+
+        rpage.PopulateFiles(RepoFiles, rect.Name);
     }
 
     #endregion
@@ -222,6 +238,70 @@ public partial class FullMainPage : Page
 
     #region defaults
 
+    private void RepoList()
+    {
+        foreach (var repo in Repos.Values)
+        {
+            var repoFileLoad = new Dictionary<string, string[]>();
+            switch (repo)
+            {
+                case "Code_Bridge":
+                    repoFileLoad.Add("Code_Bridge", new string[] {""});
+                    repoFileLoad.Add(".idea/.idea.codeBridge/.Idea", new string[] {$"Z:/CodeBridge/{_user}/{repo}/.idea/.idea.codeBridge/.Idea", "id:[0a000001aa1a]", "folder"});
+                    repoFileLoad.Add("CodeBridge", new string[] {$"Z:/CodeBridge/{_user}/{repo}/CodeBridge", "id:[0a000001aa1b]", "folder"});
+                    repoFileLoad.Add("README.md", new string[] {$"Z:/CodeBridge/{_user}/{repo}/README.md", "id:[0a000001aa1c]", "file"});
+                    repoFileLoad.Add("CodeBridge.sln", new string[] {$"Z:/CodeBridge/{_user}/{repo}/CodeBridge.sln", "id:[0000001aa1d]", "file"});
+                    repoFileLoad.Add("CodeBridge.sln.DotSettings.user", new string[] {$"Z:/CodeBridge/{_user}/{repo}/CodeBridge.sln.DotSettings.user", "id:[0000001aa1e]", "file"});
+                    break;
+                case "Ms_Office":
+                    repoFileLoad.Add("Ms_Office", new string[] {""});
+                    repoFileLoad.Add(".idea/.idea.msOffice/.Idea", new string[] {$"Z:/CodeBridge/{_user}/{repo}/.idea/.idea.msOffice/.Idea", "id:[0a000001aa1a]", "folder"});
+                    repoFileLoad.Add("_Ms_Office", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Ms_Office", "id:[0a000001aa1b]", "folder"});
+                    repoFileLoad.Add("README.md", new string[] {$"Z:/CodeBridge/{_user}/{repo}/README.md", "id:[0a000001aa1f]", "file"});
+                    repoFileLoad.Add("Ms_Office.sln", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Ms_Office.sln", "id:[0a000001aa1g]", "file"});
+                    repoFileLoad.Add("Ms_Office.sln.DotSettings.user", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Ms_Office.sln.DotSettings.user", "id:[0a000001aa1h]", "file"});
+                    break;
+                case "IOS_source":
+                    repoFileLoad.Add("IOS_source", new string[] {""});
+                    repoFileLoad.Add(".idea/.idea.iosSource/.Idea", new string[] {$"Z:/CodeBridge/{_user}/{repo}/.idea/.idea.iosSource/.Idea", "id:[0a000001aa1a]", "folder"});
+                    repoFileLoad.Add("_IOS_source", new string[] {$"Z:/CodeBridge/{_user}/{repo}/IOS_source", "id:[0a000001aa1b]", "folder"});
+                    repoFileLoad.Add("README.md", new string[] {$"Z:/CodeBridge/{_user}/{repo}/README.md", "id:[0a000001aa1i]", "file"});
+                    repoFileLoad.Add("IOS_source.sln", new string[] {$"Z:/CodeBridge/{_user}/{repo}/IOS_source.sln", "id:[0a000001aa1j]", "file"});
+                    repoFileLoad.Add("IOS_source.sln.DotSettings.user", new string[] {$"Z:/CodeBridge/{_user}/{repo}/IOS_source.sln.DotSettings.user", "id:[0a000001aa1k]", "file"});
+                    break;
+                case "Android_source":
+                    repoFileLoad.Add("Android_source", new string[] {""});
+                    repoFileLoad.Add(".idea/.idea.androidSource/.Idea", new string[] {$"Z:/CodeBridge/{_user}/{repo}/.idea/.idea.androidSource/.Idea", "id:[0a000001aa1a]", "folder"});
+                    repoFileLoad.Add("_Android_source", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Android_source", "id:[0a000001aa1b]", "folder"});
+                    repoFileLoad.Add("README.md", new string[] {$"Z:/CodeBridge/{_user}/{repo}/README.md", "id:[0a000001aa1l]", "file"});
+                    repoFileLoad.Add("Android_source.sln", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Android_source.sln", "id:[0a000001aa1m]", "file"});
+                    repoFileLoad.Add("Android_source.sln.DotSettings.user", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Android_source.sln.DotSettings.user", "id:[0a000001aa1n]", "file"});
+                    break;
+                case "Windows_source":
+                    repoFileLoad.Add("Windows_source", new string[] {""});
+                    repoFileLoad.Add(".idea/.idea.windowsSource/.Idea", new string[] {$"Z:/CodeBridge/{_user}/{repo}/.idea/.idea.windowsSource/.Idea", "id:[0a000001aa1a]", "folder"});
+                    repoFileLoad.Add("_Windows_source", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Windows_source", "id:[0a000001aa1b]", "folder"});
+                    repoFileLoad.Add("README.md", new string[] {$"Z:/CodeBridge/{_user}/{repo}/README.md", "id:[0a000001aa1o]", "file"});
+                    repoFileLoad.Add("Windows_source.sln", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Windows_source.sln", "id:[0a000001aa1p]", "file"});
+                    repoFileLoad.Add("Windows_source.sln.DotSettings.user", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Windows_source.sln.DotSettings.user", "id:[0a000001aa1q]", "file"});
+                    break;
+                case "Linux_source":
+                    repoFileLoad.Add("Linux_source", new string[] {""});
+                    repoFileLoad.Add(".idea/.idea.linuxSource/.Idea", new string[] {$"Z:/CodeBridge/{_user}/{repo}/.idea/.idea.linuxSource/.Idea", "id:[0a000001aa1a]", "folder"});
+                    repoFileLoad.Add("_Linux_source", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Linux_source", "id:[0a000001aa1b]", "folder"});
+                    repoFileLoad.Add("README.md", new string[] {$"Z:/CodeBridge/{_user}/{repo}/README.md", "id:[0a000001aa1r]", "file"});
+                    repoFileLoad.Add("Linux_source.sln", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Linux_source.sln", "id:[0a000001aa1s]", "file"});
+                    repoFileLoad.Add("Linux_source.sln.DotSettings.user", new string[] {$"Z:/CodeBridge/{_user}/{repo}/Linux_source.sln.DotSettings.user", "id:[0a000001aa1t]", "file"});
+                    break;
+                default:
+                    repoFileLoad.Add("NAME:", new string[] {"ERROR"});
+                    break;
+            }
+            
+            RepoFiles.Add(repoFileLoad);
+        }
+    }
+    
     private void DefaultMembers()
     {
         Members.Add("a000001a", "Mike");
@@ -241,17 +321,32 @@ public partial class FullMainPage : Page
     
     private void DefaultRepos()
     {
-        Repos.Add("a000001a", "Code Bridge");
-        Repos.Add("a000001b", "Ms Office");
-        Repos.Add("a000001c", "IOS source");
-        Repos.Add("a000001d", "Android source");
-        Repos.Add("a000001e", "Windows source");
-        Repos.Add("a000001f", "Linux source");
+        Repos.Add("a000001a", "Code_Bridge");
+        Repos.Add("a000001b", "Ms_Office");
+        Repos.Add("a000001c", "IOS_source");
+        Repos.Add("a000001d", "Android_source");
+        Repos.Add("a000001e", "Windows_source");
+        Repos.Add("a000001f", "Linux_source");
     }
     #endregion
 
     private void GoBackToMain(object sender, RoutedEventArgs e)
+        => load_frame.Content = null;
+
+    private void PfpClick(object sender, MouseButtonEventArgs e)
     {
-        load_frame.Content = null;
+        MessageBox.Show("PFP clicked");
     }
+
+    private void ProfileClick(object sender, MouseButtonEventArgs e)
+    {
+        MessageBox.Show("Profile clicked");
+    }
+
+    private void ShowRepo(object sender, RoutedEventArgs e)
+        => load_frame.Content = null;
+
+    public void TestResetPage()
+        => load_frame.Content = new TextEditor();
+    
 }

@@ -12,7 +12,7 @@ namespace SideNav.Views.Windows;
 public partial class MainWindow : Window
 {
     private static bool isLoggedIn = false;
-    
+    public static string user = string.Empty;
     public MainWindow()
     {
         InitializeComponent();
@@ -28,6 +28,7 @@ public partial class MainWindow : Window
 
     private void SignIn(object sender, RoutedEventArgs e)
     {
+        user = StringFromRichTextBox(Username);
         if (StringFromRichTextBox(Username).ToLower() == "admin" || Password.Password == "123")
             this.Content = new FullMainPage();
         else

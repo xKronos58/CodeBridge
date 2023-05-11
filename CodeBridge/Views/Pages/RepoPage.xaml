@@ -34,6 +34,8 @@
                 <ColumnDefinition Width="300"/>
             </Grid.ColumnDefinitions>
             
+            <StackPanel Name="FilePanel" Margin="15"/>
+            
             <Rectangle 
                 Grid.Column="1"
                 Margin="15"
@@ -42,5 +44,6 @@
                 RadiusY="34">
             </Rectangle>
         </Grid>
+        <Frame x:Name="TextFrame" Width="1035" Height="663" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Page>
