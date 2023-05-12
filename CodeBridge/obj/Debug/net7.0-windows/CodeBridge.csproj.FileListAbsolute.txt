@@ -25,3 +25,13 @@ W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\RepoPage.g.cs
 W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\RepoPage.baml
 W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\TextEditor.g.cs
 W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\TextEditor.baml
+W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\ViewUserProfile.g.cs
+W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\ViewUserProfile.baml
+W:\SideNav\CodeBridge\bin\Debug\net7.0-windows\Microsoft.Office.Interop.Outlook.dll
+W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\CodeBridge.csproj.CopyComplete
+W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\MessagePage.g.cs
+W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\MessagePage.baml
+W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\CalendarPage.g.cs
+W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\ManagePage.g.cs
+W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\CalendarPage.baml
+W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\ManagePage.baml

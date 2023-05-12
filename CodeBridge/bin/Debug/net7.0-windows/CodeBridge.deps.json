@@ -7,8 +7,19 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "CodeBridge/1.0.0": {
+        "dependencies": {
+          "Microsoft.Office.Interop.Outlook": "15.0.4797.1004"
+        },
         "runtime": {
           "CodeBridge.dll": {}
+        }
+      },
+      "Microsoft.Office.Interop.Outlook/15.0.4797.1004": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Office.Interop.Outlook.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.0.4797.1003"
+          }
         }
       }
     }
@@ -18,6 +29,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.Office.Interop.Outlook/15.0.4797.1004": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-17tdFXg/TGnbmSC9YNkIrB6P3vTSemOMI/TaUaZWQmRE1dMjHIVmBPffQhXasH/te4weHiFk8EEXUCi/NsGbuA==",
+      "path": "microsoft.office.interop.outlook/15.0.4797.1004",
+      "hashPath": "microsoft.office.interop.outlook.15.0.4797.1004.nupkg.sha512"
     }
   }
 }

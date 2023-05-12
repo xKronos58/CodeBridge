@@ -1,0 +1,193 @@
+<Page x:Class="SideNav.Views.Pages.ViewUserProfile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:SideNav.Views.Pages"
+      mc:Ignorable="d"
+      Title="ViewUserProfile" Height="663" Width="1035">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#1C1753" Offset="0.0"></GradientStop>
+                <GradientStop Color="#191936" Offset="1.0"></GradientStop>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
+        <Rectangle Width="890" Height="562" RadiusX="34" RadiusY="34">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#141227" Offset="1.0"/>
+                    <GradientStop Color="#141052" Offset="0.0"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.75*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Rectangle 
+                Grid.Column="0" 
+                Fill="#131232"
+                Margin="100, 68, 0, 68"
+                RadiusX="32"
+                RadiusY="32"/>
+            <Image 
+                Grid.Column="0"
+                Source="../../img/Banner.png" 
+                Width="280" 
+                VerticalAlignment="Top" 
+                Margin="100, 68, 0, 0"/>
+            <Rectangle 
+                Grid.Column="0"
+                Width="263"
+                Height="101"
+                RadiusX="25"
+                RadiusY="25"
+                Margin="100, 44, 0, 74"
+                Fill="#06002E">
+            </Rectangle>
+            
+            <Rectangle 
+                Fill="#06002E"
+                Width="169"
+                Height="18"
+                RadiusX="10"
+                RadiusY="10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Margin="90, 240, 0, 0">
+            </Rectangle>
+            
+            <Rectangle 
+                Grid.Column="0"
+                Width="263"
+                Height="72"
+                RadiusX="25"
+                RadiusY="25"
+                Margin="100, 234, 0, 74"
+                Fill="#06002E"/>
+            
+            <Rectangle 
+                Grid.Column="0" 
+                Width="54" 
+                Height="54" 
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Center" 
+                RadiusX="54" 
+                RadiusY="53" 
+                Fill="#050025" 
+                Margin="100, 140, 0, 0"/>
+            
+            <Image 
+                Grid.Column="0" 
+                Width="48" 
+                Height="48" 
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Center" 
+                Source="../../img/UserPfp.png"
+                Margin="100, 143, 0, 0"/>
+            
+            <Label 
+                Name="DisplayName"
+                Grid.Column="0"
+                Foreground="White"
+                FontSize="20"
+                FontWeight="Regular"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="100, 0, 0, 244"
+                Width="263"
+                Height="36"
+                Content="USERNAME"/>
+            
+            <Label 
+                Grid.Column="0"
+                Width="263"
+                Height="10"
+                Margin="100, 194, 0, 74"
+                Foreground="White"
+                FontWeight="Light"
+                FontSize="10"
+                > Availability:</Label>
+            <Label 
+                Grid.Column="0"
+                Foreground="White"
+                FontSize="10"
+                FontWeight="Light"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Center"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="120, 114, 0, 0"
+                Width="263"
+                Height="22"
+                Content="Availability:"/>
+            <Label 
+                Grid.Column="0"
+                Foreground="White"
+                FontSize="10"
+                FontWeight="Light"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Center"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="120, 0, 0, 104"
+                Width="263"
+                Height="22"
+                Content="Recent Updates:"/>
+            
+            <Label Grid.Column="0"
+                   Name="Email"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Content="USERNAME@company.com"
+                   VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Left"
+                   Foreground="White"
+                   FontWeight="Light"
+                   FontSize="10"
+                   Margin="50, 0, 0, 165"/>
+            
+            <Label Grid.Column="0"
+                   Name="StatusText"
+                   Content="Online"
+                   Foreground="#959595"
+                   Margin="310, 197, 0, 0"/>
+            
+            <Rectangle Grid.Column="0"
+                       Name="StatusDot"
+                       Width="12"
+                       Height="12"
+                       Margin="340, 0, 0, 240"
+                       RadiusX="12"
+                       RadiusY="12"
+                       Fill="Lime"/>
+            
+            <Image Grid.Column="0"
+                   Width="24"
+                   Height="24"
+                   Source="../../img/EmailIcon.png"
+                   Margin="227, 0, 0, 158"
+                   Stretch="UniformToFill"
+                   MouseLeftButtonDown="NewEmail"/>
+            
+            <Image Grid.Column="0"
+                   Width="16"
+                   Height="16"
+                   Source="../../img/MessageBubble.png"
+                   Margin="187, 0, 0, 164"
+                   Stretch="UniformToFill"
+                   MouseLeftButtonDown="OpenMessage"/>
+            <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto">
+                <StackPanel Name="RepoPanel" CanVerticallyScroll="True" Margin="20, 60, 90, 60"/>
+            </ScrollViewer>
+        </Grid>
+        <Frame x:Name="load_frame" Width="1035" Height="663" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Page>

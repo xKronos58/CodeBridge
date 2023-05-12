@@ -13,6 +13,7 @@
                 <GradientStop Color="#191936" Offset="1.0"></GradientStop>
             </LinearGradientBrush>
         </Grid.Background>
+        <Label Foreground="Red" FontWeight="SemiBold" Content="/!\ Only .txt files are currently supported" Margin="10, 0 0 0"/>
         <Grid Margin="50">
             <Rectangle
                 RadiusX="34"

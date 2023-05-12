@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -25,10 +26,15 @@ public partial class TextEditor : Page
                 rFile[1] = value[0];
                 rFile[2] = value[1];
                 rFile[3] = value[2];
-                var lines = File.ReadAllLines(rFile[1]);
+                string[] lines = new string[] { };
+                if (!File.Exists(rFile[1]))
+                {
+                    MessageBox.Show($"Cannot open file as it is not supported by CodeBridge\n({rFile[1]})");
+                    break;
+                }
+                lines = File.ReadAllLines(rFile[1]);
                 foreach (var line in lines)
                 {
-                    TextField.Document.Blocks.Clear();
                     TextField.Document.Blocks.Add(new Paragraph(new Run(line)));
                 }
                 break;

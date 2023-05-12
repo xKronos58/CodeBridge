@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "D9dbLKIygr9/J+3MtclwEwaliPCKE6NEuuAIrro/C+36n8KTtMP1GL/q5PMIfd53LgNH/EOn7QJsa/avRv1PIg==",
+  "dgSpecHash": "3R5cAZiHH7upFuDhyQfUZNJuSISxb2PbEtw8De7hwgb0wd/G+R1kGXaiWXpawk0tA3VPNRUPs+/tSeuZNUzvZQ==",
   "success": true,
   "projectFilePath": "W:\\SideNav\\CodeBridge\\CodeBridge.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\finle\\.nuget\\packages\\microsoft.office.interop.outlook\\15.0.4797.1004\\microsoft.office.interop.outlook.15.0.4797.1004.nupkg.sha512"
+  ],
   "logs": []
 }
