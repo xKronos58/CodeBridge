@@ -5,8 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:SideNav.Views.Pages"
       mc:Ignorable="d"
-      Title="EditUserProfile" Height="450" Width="800">
+      Title="EditUserProfile" Height="663" Width="1035">
     <Grid>
-        
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#1C1753" Offset="0.0"></GradientStop>
+                <GradientStop Color="#191936" Offset="1.0"></GradientStop>
+            </LinearGradientBrush>
+        </Grid.Background>
     </Grid>
 </Page>

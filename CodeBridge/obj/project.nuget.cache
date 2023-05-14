@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "3R5cAZiHH7upFuDhyQfUZNJuSISxb2PbEtw8De7hwgb0wd/G+R1kGXaiWXpawk0tA3VPNRUPs+/tSeuZNUzvZQ==",
+  "dgSpecHash": "pmxJbR5JhAE6Y37/WEHK9jJBcRfGOhDO4iMt3YPWm9Fn0UlXq7IB+5ha8ebfWarl416GZuGX0IlQcYXhJ+a5eA==",
   "success": true,
   "projectFilePath": "W:\\SideNav\\CodeBridge\\CodeBridge.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\finle\\.nuget\\packages\\microsoft.office.interop.outlook\\15.0.4797.1004\\microsoft.office.interop.outlook.15.0.4797.1004.nupkg.sha512"
+    "C:\\Users\\finle\\.nuget\\packages\\microsoft.office.interop.outlook\\15.0.4797.1004\\microsoft.office.interop.outlook.15.0.4797.1004.nupkg.sha512",
+    "C:\\Users\\finle\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\finle\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\finle\\.nuget\\packages\\wpf-ui\\3.0.0-preview.2\\wpf-ui.3.0.0-preview.2.nupkg.sha512"
   ],
   "logs": []
 }

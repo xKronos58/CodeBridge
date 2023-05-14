@@ -35,3 +35,6 @@ W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\CalendarPage.g.cs
 W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\ManagePage.g.cs
 W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\CalendarPage.baml
 W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\ManagePage.baml
+W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\EditUserProfile.g.cs
+W:\SideNav\CodeBridge\obj\Debug\net7.0-windows\Views\Pages\EditUserProfile.baml
+W:\SideNav\CodeBridge\bin\Debug\net7.0-windows\Wpf.Ui.dll

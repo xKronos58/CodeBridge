@@ -29,10 +29,13 @@
       <Resource Include="img\MessageBubble.png" />
       <None Remove="img\EmailIcon.png" />
       <Resource Include="img\EmailIcon.png" />
+      <None Remove="img\UserIcon.png" />
+      <Resource Include="img\UserIcon.png" />
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.Office.Interop.Outlook" Version="15.0.4797.1004" />
+      <PackageReference Include="WPF-UI" Version="3.0.0-preview.2" />
     </ItemGroup>
 
 </Project>
